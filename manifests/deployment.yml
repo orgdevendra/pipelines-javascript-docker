@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: orgdevendrapipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: orgdevendrapipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: orgdevendrapipelinesjavascriptdocker 
+          image: mycontainterregistry1.azurecr.io/orgdevendrapipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
